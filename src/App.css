@@ -1,0 +1,153 @@
+/* Dark theme background and text colors */
+:root {
+  --dark-bg: #121212;
+  --dark-surface: #1f1f1f;
+  --dark-text: #e0e0e0;
+  --accent-color: #00bfa5;
+}
+
+/* Reset some default body margin/padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  height: 100%;
+}
+
+/* App container splits sidebar and main content */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 240px;
+  background-color: var(--dark-surface);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-links li:hover {
+  background-color: #333333;
+}
+
+.user-section {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 1rem 2rem;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Top bar with user logo in top-right */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.user-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Search area */
+.search-area {
+  margin-bottom: 2rem;
+}
+
+.search-area h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: var(--dark-text);
+  outline: none;
+}
+
+.send-button {
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.send-button:hover {
+  background-color: #00a793;
+}
+
+/* Cards container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual cards */
+.card {
+  background-color: var(--dark-surface);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Optional hover effect on cards */
+.card:hover {
+  background-color: #2a2a2a;
+  transition: background 0.3s;
+}
